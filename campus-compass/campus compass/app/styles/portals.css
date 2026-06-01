@@ -1,0 +1,142 @@
+/* ─── Portals Section ──────────────────────────────────────────────────────── */
+.portals-section {
+    position: relative;
+    width: 100%;
+    padding: 80px 20px;
+    background-color: var(--bg-color);
+    text-align: center;
+    z-index: 5;
+}
+
+.portals-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.portals-heading {
+    margin-bottom: 50px;
+}
+
+.portals-title {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 4.5rem;
+    font-weight: 750;
+    letter-spacing: -2px;
+    color: var(--color-dark);
+    margin: 0;
+}
+
+.portals-subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+.portals-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+/* ─── Portal Cards ───────────────────────────────────────────────────────── */
+.portal-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 40px;
+    border-radius: 30px;
+    text-align: left;
+    text-decoration: none;
+    color: var(--color-dark);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.3s ease;
+    cursor: url("/assets/Cursor SVG/cursor-pointer.svg") 12 12, pointer;
+}
+
+.portal-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+.portal-card--aums {
+    background-color: var(--color-lightgreen);
+}
+
+.portal-card--myamrita {
+    background-color: var(--color-pink);
+}
+
+.portal-card__icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portal-card__icon img {
+    width: 40px;
+    height: 40px;
+}
+
+.portal-card__content h3 {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 750;
+    margin: 0 0 15px 0;
+    letter-spacing: -1px;
+}
+
+.portal-card__content p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0 0 30px 0;
+    opacity: 0.9;
+}
+
+.portal-card__link-text {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--color-dark);
+    padding-bottom: 2px;
+}
+
+/* ─── Responsive Design ──────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .portals-grid {
+        grid-template-columns: 1fr;
+    }
+    .portals-title {
+        font-size: 3.5rem;
+    }
+    .portal-card {
+        padding: 40px 30px;
+    }
+    .portal-card__content h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .portals-title {
+        font-size: 2.8rem;
+    }
+    .portals-subtitle {
+        font-size: 1.1rem;
+    }
+    .portal-card {
+        padding: 30px 20px;
+    }
+    .portal-card__icon {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+    }
+}

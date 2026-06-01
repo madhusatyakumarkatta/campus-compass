@@ -1,0 +1,72 @@
+/* ─── Gallery Section ──────────────────────────────────────────────────────── */
+.gallery-section {
+    position: relative;
+    width: 100%;
+    padding: 100px 60px;
+    background-color: var(--color-light);
+    text-align: center;
+}
+
+.gallery-heading {
+    margin-bottom: 60px;
+}
+
+.gallery-title {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 5rem;
+    font-weight: 750;
+    line-height: 1;
+    letter-spacing: -3px;
+    color: var(--color-dark);
+    margin: 0;
+}
+
+.gallery-subtitle {
+    font-family: 'Times New Roman', 'Georgia', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 3rem;
+    color: var(--color-dark);
+    margin: 10px 0 0 0;
+}
+
+/* ─── Iframe Grid ───────────────────────────────────────────────────────── */
+.instagram-embed-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: translateY(30px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gallery-item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 100%;
+    max-width: 480px; /* match the width of other columns */
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .instagram-embed-grid {
+        grid-template-columns: 1fr;
+    }
+    .gallery-title { font-size: 4rem; }
+    .gallery-subtitle { font-size: 2.5rem; }
+}
+
+@media (max-width: 600px) {
+    .gallery-section { padding: 60px 20px; }
+    .gallery-title { font-size: 3rem; }
+    .gallery-subtitle { font-size: 2rem; }
+}
